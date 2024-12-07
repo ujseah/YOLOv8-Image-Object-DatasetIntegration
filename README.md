@@ -23,7 +23,7 @@ YOLOv8-MultiObjectDetection leverages YOLOv8 for multi-class object detection, a
   ```bash
   pip install ultralytics roboflow matplotlib opencv-python pyyaml
 
--- 
+---
 
 ## Dataset Preparation
 Download Datasets:
@@ -49,18 +49,19 @@ Class Remapping:
 Automatically remaps class indices to a unified format across all datasets.
 Use these datasets as input to train the YOLOv8 model with a unified class mapping.
 
---
+---
 
 ## Training the Model
 Load the YOLOv8 model:
 
 from ultralytics import YOLO
 model = YOLO('yolov8n.pt')
+
 Train the model:
 
 model.train(data='/content/final_dataset/data.yaml', epochs=10, imgsz=640, batch=16)
 
---
+---
 
 ## Inference
 Use the trained model to make predictions:
@@ -70,31 +71,31 @@ View results:
 
 Processed images with bounding boxes are saved automatically.
 
---
+---
 
 # Exporting the Model
 Export the trained YOLOv8 model to ONNX format for deployment:
 
 model.export(format="onnx")
 
---
+---
 
 ## File Structure
 - data.yaml: Configuration file for the YOLOv8 model, specifying datasets and classes.
 - final_dataset/: Directory containing the unified training dataset.
 - notebook.ipynb: Google Colab notebook implementing the pipeline.
 
---
+---
 
 ## License
 This project is licensed under the MIT License.
 
---
+---
 
 ## Contributions
 Contributions are welcome! Feel free to open an issue or submit a pull request.
 
--- 
+---
 
 ## Acknowledgements
 Ultralytics YOLOv8
